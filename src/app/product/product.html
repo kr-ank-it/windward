@@ -1,1 +1,33 @@
-<p>product works!</p>
+<h2> Available Products! </h2>
+
+
+@if(!loading){
+  <div class="products-container">
+    <mat-grid-list cols="5" rowHeight="200px" gutterSize="50px">
+      @for(product of products; track product.id){
+        <mat-grid-tile>
+          <mat-card>
+            <mat-card-header>
+              <mat-card-title>{{ product.name }}</mat-card-title>
+<!--              <mat-card-title>{{product.name}} </mat-card-title>-->
+<!--              <mat-card-subtitle>Category: {{ product.category.name }}</mat-card-subtitle>-->
+            </mat-card-header>
+<!--            <img mat-card-image alt="{{ product.name }}">-->
+            <mat-card-content>
+              <p>Price: ${{ product.unitPrice }}</p>
+              <p>Stock: {{ product.unitsInStock }}</p>
+            </mat-card-content>
+          </mat-card>
+        </mat-grid-tile>
+      }
+
+    </mat-grid-list>
+  </div>
+}@else{
+  <ng-template #loadingTpl>
+    <p>Loading products...</p>
+  </ng-template>
+}
+
+
+
