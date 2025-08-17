@@ -1,0 +1,79 @@
+<section>
+
+  <mat-card>
+
+    <mat-card-header>
+      <mat-card-title>Welcome to Windward 🌬️</mat-card-title>
+    </mat-card-header>
+
+    @if(selectedTab==0){
+      <mat-card-content>
+        <mat-card-header>
+          <mat-card-title>Login</mat-card-title>
+          <mat-card-subtitle>Enter your credentials</mat-card-subtitle>
+        </mat-card-header>
+        <form [formGroup]="loginForm" (ngSubmit)="onLogin()">
+          <p>
+            <mat-form-field appearance="fill" class="full-width">
+              <mat-label>Email</mat-label>
+              <input matInput formControlName="email" required>
+            </mat-form-field>
+          </p>
+          <p>
+            <mat-form-field appearance="fill" class="full-width">
+              <mat-label>Password</mat-label>
+              <input matInput formControlName="password" required>
+            </mat-form-field>
+          </p>
+          <p>
+            <button matButton="filled" type="submit">
+              Login
+            </button>
+          </p>
+        </form>
+        <p class="text-center text-sm mt-2">
+          Don’t have an account?
+          <a class="text-blue-600 cursor-pointer hover:underline" (click)="enableSignUp()">Sign up here</a>
+        </p>
+      </mat-card-content>
+    } @else {
+      <mat-card-content>
+        <mat-card-header>
+          <mat-card-title>Sign-up!</mat-card-title>
+          <mat-card-subtitle>Enter your details </mat-card-subtitle>
+        </mat-card-header>
+        <form [formGroup]="signupForm" (ngSubmit)="onSignup()">
+          <p>
+            <mat-form-field appearance="fill" class="full-width">
+              <mat-label>Name</mat-label>
+              <input matInput formControlName="name" required>
+            </mat-form-field>
+          </p>
+          <p>
+            <mat-form-field appearance="fill" class="full-width">
+              <mat-label>Email</mat-label>
+              <input matInput formControlName="email" required>
+            </mat-form-field>
+          </p>
+          <p>
+            <mat-form-field appearance="fill" class="full-width">
+              <mat-label>Password</mat-label>
+              <input matInput formControlName="password" required>
+            </mat-form-field>
+          </p>
+          <p>
+            <button matButton="filled" type="submit">
+              Sign-up
+            </button>
+          </p>
+        </form>
+        <p class="text-center text-sm mt-2">
+          Already have an account?
+          <a class="text-blue-600 cursor-pointer hover:underline" (click)="enableLogin()">Login here</a>
+        </p>
+      </mat-card-content>
+    }
+
+  </mat-card>
+
+</section>

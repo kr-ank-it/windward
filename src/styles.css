@@ -1,1 +1,39 @@
-/* You can add global styles to this file, and also import other style files */
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+  background: #1976d2;
+  color: white;
+}
+.spacer {
+  flex: 1 1 auto;
+}
+nav a {
+  margin-left: 1rem;
+  color: white;
+  text-decoration: none;
+}
+nav a.active {
+  font-weight: bold;
+  text-decoration: underline;
+}
+main {
+  padding: 2rem;
+}
+.main-content {
+  padding-bottom: 60px; /* adjust to footer height */
+}
+
+.actions button {
+  margin: 1rem;
+  padding: 0.75rem 1.5rem;
+  background: #1976d2;
+  border: none;
+  color: white;
+  cursor: pointer;
+  border-radius: 4px;
+}
+.actions button:hover {
+  background: #125ca1;
+}
+
