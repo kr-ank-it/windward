@@ -1,59 +1,30 @@
-# Windward
+Windward is a frontend application built with Angular that integrates with a microservices backend.
+It provides user authentication, product management workflows, and notifications, showcasing secure flows, reactive programming, and clean UI design.
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 20.1.6.
+🚀 Features
 
-## Development server
+🔐 Authentication Flow with JWT/OAuth2 integration.
 
-To start a local development server, run:
+🛡️ Route Guards for role-based access control.
 
-```bash
-ng serve
-```
+📋 Reactive Forms for dynamic and secure user input handling.
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+📦 Product Management UI (CRUD operations).
 
-## Code scaffolding
+⚡ RxJS-powered API handling using map, switchMap, and catchError.
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+🎨 Responsive and modern Angular components.
 
-```bash
-ng generate component component-name
-```
+🛠️ Tech Stack
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+Framework: Angular 20
 
-```bash
-ng generate --help
-```
+Language: TypeScript
 
-## Building
+UI Library: Angular Material
 
-To build the project run:
+State & Async: RxJS, Reactive Forms
 
-```bash
-ng build
-```
+Styling: SCSS, Angular Material (if you used it)
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+Auth: JWT/OAuth2 (integrated with backend Auth Service)
